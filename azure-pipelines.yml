@@ -24,7 +24,7 @@ steps:
 
 - bash: flake8
   displayName: "Linting: flake8"
-  workingDirectory: $(srcDirectory)
+#  workingDirectory: $(srcDirectory)
 
 - script: |
     pip install pytest pytest-azurepipelines
