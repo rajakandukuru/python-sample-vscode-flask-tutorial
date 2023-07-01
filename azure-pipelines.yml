@@ -22,9 +22,10 @@ steps:
 - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
 
-- bash: flake8 .
-  displayName: "Linting: flake8"
-#  workingDirectory: $(srcDirectory)
+- script: |
+    python -m pip install flake8
+    flake8 .
+    displayName: 'Run lint tests'
 
 - script: |
     pip install pytest pytest-azurepipelines
