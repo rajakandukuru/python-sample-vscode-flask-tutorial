@@ -23,7 +23,7 @@ steps:
   displayName: 'Install tools'
 
 - script: pylint src
-    displayName: 'Lint with pylint'
+  displayName: 'Lint with pylint'
 - script: flake8 src --statistics --count
 
 - script: |
